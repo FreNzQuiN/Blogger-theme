@@ -1,84 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPorto01</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Portofolio Social Media Designer yang berfokus pada branding dan kreativitas.">
+    <link rel="stylesheet" href="./vars.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>Portofolio | Social Media Designer</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 </head>
+
 <body>
-    <style>
-        body {
-            background-color: rgba(225, 117, 100, 0.1);
-            font-family: 'Noto Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 300;
-            color: #09122C;
-        }
-        header {
-            background-image: linear-gradient(55deg, rgba(9, 18, 44, 0.9), rgba(255, 0, 0, 0.2), rgba(190, 49, 68, 0.9));
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        main {
-            padding: 20px; /* Menambahkan padding untuk ruang antara konten dan batas halaman */
-        }
-        footer {
-            background-image: linear-gradient(0deg, #333, rgba(0, 0, 0, 1));
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        .noto-sans-regular {
-            font-weight: 400;
-            font-style: normal;
-        }
-        header .header-title {
-            margin: 0;
-            padding: 0 0 12px 0;
-            box-shadow: rgba(9, 18, 44, 0.4) 0px 1px 0 0;
-        }
-    </style>
-    <header>
-        <div class="header-title">
-            <h1 class="noto-sans-regular">BRING YOUR DESIGN ALIVE</h1>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="spinner" id="container">
+            <div id="dot"></div>
+            <div class="step" id="s1"></div>
+            <div class="step" id="s2"></div>
+            <div class="step" id="s3"></div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Home</h2>
-            <p>Welcome to WebPorto01</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2021 WebPorto01</p>
+    </div> 
+
+    <!-- BACKGROUND AUDIO -->
+    <audio id="background-audio" autoplay loop>
+        <source src="bg-music.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- NAVIGATION BAR DESKTOP -->
+    <nav class="navbar-desktop">
+        <ul class="navigation-pill-list">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#design">DESIGN</a></li>
+            <li><a href="#project">PROJECT</a></li>
+            <li><a href="#review">REVIEW</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div class="music-icon">
+            <!-- From Uiverse.io by Na3ar-17 -->
+            <div class="container">
+                <label class="switch">
+                    <input type="checkbox" id="toggleAnimation" checked >
+                    <span class="slider">
+                        <span class="ball">
+                            <span class="icon">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M8 18V6l8 6-8 6Z"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NAVIGATION BAR MOBILE (SIDEBAR) -->
+    <nav class="navbar-mobile">
+        <!-- Tombol hamburger -->
+        <button class="hamburger" onclick="openNav()">☰</button>
+        <div class="music-icon">
+            <!-- From Uiverse.io by Na3ar-17 -->
+            <div class="container">
+                <label class="switch">
+                    <input type="checkbox" id="toggleAnimation" checked >
+                    <span class="slider">
+                        <span class="ball">
+                            <span class="icon">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M8 18V6l8 6-8 6Z"></path>
+                                </svg>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <button class="close-btn" onclick="closeNav()">×</button>
+            <a href="#home" onclick="closeNav()">HOME</a>
+            <a href="#design" onclick="closeNav()">DESIGN</a>
+            <a href="#project" onclick="closeNav()">PROJECT</a>
+            <a href="#review" onclick="closeNav()">REVIEW</a>
+            <a href="#contact" onclick="closeNav()">CONTACT</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <img class="bg-image" src="bg-image1.webp" />
+    <div class="bg-image-overlay"></div>
+    <section id="home" class="section">
+        <h1>SELAMAT DATANG DI PORTOFOLIO SAYA</h1>
+        <h2><u><span style="color:#4b164c;">Butuh Social Media Designer?</span></u></h2>
+        <p>Saya seorang desainer media sosial yang berfokus pada branding dan kreativitas.</p>
+        <p>
+            <b>Berpengalaman dalam desain</b> untuk berbagai platform digital, saya siap membantu meningkatkan
+            <mark>branding online</mark> Anda dengan visual yang menarik.
+        </p>
+    </section>
+
+    <!-- DESIGN -->
+    <section id="design" class="design">
+        <h2 class="design-text">Contoh Desain Reels dan Feeds</h2>
+        <div class="images">
+            <img class="img-1" src="img-1.webp" alt="Desain Reel" />
+            <img class="img-2" src="img-2.webp" alt="Desain Feed" />
+        </div>
+    </section>
+
+    <!-- PROJECT -->
+    <section id="project" class="project-section">
+        <h2>Proyek Saya</h2>
+        <p>Beberapa proyek yang telah saya kerjakan:</p>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn left" onclick="moveProjectSlide(-1)">&#10094;</button>
+
+            <div class="project-carousel">
+                <div class="project-card"><img src="prj-1.webp" />
+                    <p>Persona akun fanspage anime</p>
+                </div>
+                <div class="project-card"><img src="prj-2.webp" />
+                    <p>Review Maou Gakuin</p>
+                </div>
+                <div class="project-card"><img src="prj-3.webp" />
+                    <p>Review Maou Gakuin</p>
+                </div>
+                <div class="project-card"><img src="prj-4.webp" />
+                    <p>Review Magic Maker</p>
+                </div>
+                <div class="project-card"><img src="prj-5.webp" />
+                    <p>Review Magic Maker</p>
+                </div>
+                <div class="project-card"><img src="prj-6.webp" />
+                    <p>Poster event jejepangan</p>
+                </div>
+            </div>
+
+            <button class="carousel-btn right" onclick="moveProjectSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+
+
+    <!-- REVIEW -->
+    <section id="review" class="section">
+        <h2 style="color:#4b164c;">Testimoni Klien</h2>
+        <p style="color:#6a226b;">Beberapa review dari klien yang telah bekerja sama dengan saya:</p>
+        <div class="review-carousel">
+            <div class="review-track">
+                <div class="review-card"><strong>Anna:</strong> "Desainnya sangat menarik dan profesional!"</div>
+                <div class="review-card"><strong>Michael:</strong> "Saya sangat puas dengan hasilnya, responsif dan
+                    cepat!"</div>
+                <div class="review-card"><strong>Tami:</strong> "Kreativitas yang luar biasa, branding jadi lebih kuat!"
+                </div>
+                <div class="review-card"><strong>Keisya:</strong> "Sangat profesional, sangat menarik di mata!"</div>
+                <div class="review-card"><strong>Arnold:</strong> "Saya kagum dengan hasilnya, responsif dan cepat!"
+                </div>
+                <div class="review-card"><strong>Sami:</strong> "Kreativitas dan profesionalitas, branding jadi lebih
+                    mantap!"
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <h2>Kontak Saya</h2>
+        <p>Jika tertarik untuk bekerja sama, silakan hubungi saya melalui:</p>
+        <ul>
+            <li>Web dan Blog: <a href="https://kananimezone.blogspot.com/" target="_blank">kananimezone.blogspot.com</a>
+            </li>
+            <li>Email: <a href="mailto:kananimezone@gmail.com">kananimezone@designer.com</a></li>
+            <li>Instagram: <a href="https://instagram.com/kananime.zone" target="_blank">@kananime.zone</a></li>
+            <li>WhatsApp: <a href="https://wa.me/6285704026395"><sup>(+62)</sup> 857 0402 6395</a></li>
+        </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Portofolio Social Media Designer. <sub>All Rights Reserved.</sub></p>
+        <div class="social-icons">
+            <a href="https://instagram.com/kananime.zone" target="_blank">Instagram</a>
+            <a href="https://wa.me/6285704026395" target="_blank">WhatsApp</a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
+    </script>
 </body>
+
 </html>
