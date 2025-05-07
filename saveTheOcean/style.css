@@ -1,0 +1,49 @@
+.header,
+.content,
+.footer,
+.sidebar,
+.hero-image,
+.ocean-statistic,
+.partner {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.header {
+    background-color: goldenrod;
+}
+
+.hero-image {
+    height: 360px;
+    background-color: lightseagreen;
+}
+
+.ocean-statistic {
+    background-color: orangered;
+}
+
+.content {
+    background-color: orange;
+}
+
+.sidebar {
+    background-color: yellow;
+}
+
+.content,
+.sidebar,
+.ocean-statistic {
+    height: 240px;
+}
+
+.partner {
+    background-color: salmon;
+    height: 160px;
+}
+
+.footer {
+    background-color: gold;
+}
