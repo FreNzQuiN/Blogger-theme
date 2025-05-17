@@ -4,7 +4,10 @@
 .sidebar,
 .hero-image,
 .ocean-statistic,
-.partner {
+.partner,
+.contact,
+.navigation,
+.search {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     padding: 15px;
@@ -13,11 +16,23 @@
 }
 
 .header {
-    background-color: goldenrod;
+    background-color: lightblue;
+}
+
+.navigation {
+    background-color: forestgreen;
+}
+
+.search {
+    background-color: lightcoral;
+}
+
+.hero-image,
+.ocean-statistic {
+    height: 360px;
 }
 
 .hero-image {
-    height: 360px;
     background-color: lightseagreen;
 }
 
@@ -34,9 +49,13 @@
 }
 
 .content,
-.sidebar,
-.ocean-statistic {
-    height: 240px;
+.sidebar {
+    height: 480px;
+}
+
+.contact {
+    background-color: saddlebrown;
+    height: 160px;
 }
 
 .partner {
