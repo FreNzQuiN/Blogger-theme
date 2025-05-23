@@ -45,7 +45,7 @@ body {
     top: 100%; /* Tempatkan di bawah navbar */
     left: 0;
     background-color: #fff; /* Warna latar belakang agar terlihat */
-    width: 100%;
+    width: 35vw;
     z-index: 1000; /* Pastikan di atas elemen lain */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan opsional */
     border-radius: 5px; /* Sudut membulat opsional */
