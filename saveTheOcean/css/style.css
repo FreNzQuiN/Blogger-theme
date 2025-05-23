@@ -194,12 +194,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap; /* Izinkan logo untuk turun ke baris baru */
 }
 
 .partner-logos img {
     width: 150px;
     height: auto;
     object-fit: contain;
+    margin: 10px; /* Tambahkan margin untuk ruang antar logo */
 }
 
 /* Footer */
