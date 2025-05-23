@@ -1,0 +1,211 @@
+/* style.css */
+
+/* General Styles */
+body {
+    font-family: sans-serif;
+    color: #333;
+    background-color: #EBF5FB;
+}
+
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Header */
+.header {
+    background-color: #FFFFFF; /* White */
+    padding: 20px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    color: #0077B6; /* Oxford Blue */
+    font-size: 2em;
+}
+
+/* Navigation */
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    color: #0077B6; /* Oxford Blue */
+    padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00B4D8; /* Pacific Cyan */
+}
+
+/* Navbar Collapse Styling */
+.navbar-collapse {
+    position: absolute;
+    top: 100%; /* Tempatkan di bawah navbar */
+    left: 0;
+    background-color: #fff; /* Warna latar belakang agar terlihat */
+    width: 100%;
+    z-index: 1000; /* Pastikan di atas elemen lain */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan opsional */
+    border-radius: 5px; /* Sudut membulat opsional */
+}
+
+.navbar-nav {
+    flex-direction: column; /* Susun item menu secara vertikal */
+    padding: 10px;
+}
+
+.navbar-toggler {
+    /* Adjust position for better visibility */
+    position: relative;
+    z-index: 1001;
+}
+
+@media (min-width: 992px) { /* Adjust breakpoint to match your layout */
+    .navbar-collapse {
+        position: static; /* Kembalikan ke posisi semula saat layar besar */
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        flex-grow: 1; /* Allow navbar to take remaining space */
+    }
+
+    .navbar-nav {
+        flex-direction: row; /* Susun item menu secara horizontal */
+        justify-content: flex-end; /* Align menu items to the right */
+    }
+}
+
+/* Hero Section */
+.hero {
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    border-radius: 8px;
+}
+
+.ocean-statistic {
+    background-color: #EBF5FB; /* Light Blue */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ocean-statistic h2 {
+    color: #0077B6; /* Oxford Blue */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.ocean-statistic ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ocean-statistic li {
+    margin-bottom: 8px;
+}
+
+/* Main Content Styles */
+.content-area {
+    margin-bottom: 30px;
+}
+
+.content {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    font-size: 1.7em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 15px;
+}
+
+.content-item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.content-item h3 {
+    font-size: 1.3em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 5px;
+}
+
+.content-item p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.sidebar {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.7em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 15px;
+}
+
+.testimoni {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.testimoni p {
+    font-style: italic;
+    color: #555;
+}
+
+/* Call to Action Styles */
+.cta {
+    margin-bottom: 30px;
+}
+
+.cta .contact,
+.cta .partner {
+    background-color: #EBF5FB; /* Light Blue */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cta h2 {
+    font-size: 1.7em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.partner-logos img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Footer */
+.footer {
+    background-color: #0077B6; /* Oxford Blue */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 20px 0;
+}

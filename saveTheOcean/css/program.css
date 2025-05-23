@@ -1,0 +1,142 @@
+/* Program List Styles */
+.program-page {
+    padding: 30px 0;
+    background-color: #f8f9fa; /* Light Gray */
+}
+
+.program-list {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-list-title {
+    font-size: 2em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 20px;
+}
+
+.program-item {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.program-image {
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.program-details {
+    flex: 1;
+}
+
+.program-title {
+    font-size: 1.5em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 10px;
+}
+
+.program-description {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #00B4D8; /* Pacific Cyan */
+    border-color: #00B4D8;
+}
+
+.btn-primary:hover {
+    background-color: #0077B6; /* Oxford Blue */
+    border-color: #0077B6;
+}
+
+/* Media Query untuk Layar Kecil (Tablet/Mobile) */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .program-item {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+        align-items: flex-start; /* Aligment ke kiri */
+    }
+
+    .program-image {
+        width: 100%; /* Gambar memenuhi lebar container */
+        height: auto; /* Tinggi menyesuaikan proporsi gambar */
+        margin-right: 0; /* Hilangkan margin kanan */
+        margin-bottom: 10px; /* Tambahkan margin bawah */
+    }
+    .program-details {
+        margin-bottom: 10px; /* Add margin bottom */
+    }
+}
+
+/* Program Detail Styles */
+.program-detail-page {
+    padding: 30px 0;
+    background-color: #f8f9fa; /* Light Gray */
+}
+
+.program-detail {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.program-detail-title { /* Changed to program-detail-title */
+    font-size: 2em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 20px;
+}
+
+.program-detail-image { /* Changed to program-detail-image */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.program-detail-description { /* Changed to program-detail-description */
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.program-detail h2 {
+    font-size: 1.5em;
+    color: #0077B6; /* Oxford Blue */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.program-detail ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+
+
+.article-sidebar {
+    padding: 20px;
+}
+
+.sidebar-widget {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-widget h3 {
+    font-size: 1.4em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 10px;
+}

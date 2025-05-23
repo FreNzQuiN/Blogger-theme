@@ -2,121 +2,170 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Save the Ocean</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
-  <link href="wireframeStyle.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konservasi Laut</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="container-fluid p-0">
     <!-- Header -->
-    <header class="bg-primary text-white py-3">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-4 text-center text-md-start fw-bold">Save the Ocean</div>
-          <div class="col-12 col-md-4 text-center">
-            <nav>
-              <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="#">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Program</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Artikel</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="col-12 col-md-4 text-center text-md-end">
-            <input type="text" class="form-control form-control-sm d-inline w-75" placeholder="Cari...">
-          </div>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xs-6 col-sm-5 col-md-4">
+                    <h1>Save Our Ocean</h1>
+                </div>
+                <div class="col-3 col-md-5 col-xl-6">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="program.html">Program</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="education.html">Edukasi</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">Tentang Kami</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col col-xs-4">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Cari</button>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
     </header>
 
-    <!-- Hero Image -->
-    <section class="hero-image bg-light text-center py-5">
-      <img src="1. Header.jpg" alt="Lautan" class="img-fluid">
-      <h2 class="mt-4">Lindungi Laut Kita</h2>
-      <p class="lead">Bersama menjaga ekosistem laut untuk masa depan.</p>
-    </section>
-
-    <!-- Ocean Statistic -->
-    <section class="bg-info text-white text-center py-5">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <h3>70%</h3>
-            <p>Permukaan Bumi adalah Lautan</p>
-          </div>
-          <div class="col-md-4">
-            <h3>50%</h3>
-            <p>Oksigen Dihasilkan oleh Laut</p>
-          </div>
-          <div class="col-md-4">
-            <h3>1 Juta+</h3>
-            <p>Spesies Hidup di Laut</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Content & Sidebar -->
-    <main class="py-5 bg-light">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Main Content -->
-          <div class="col-12 col-md-8">
-            <article class="mb-4">
-              <h2>Program Relawan</h2>
-              <p>Bergabunglah dalam program bersih-bersih pantai, restorasi terumbu karang, dan edukasi publik mengenai polusi laut.</p>
-            </article>
-            <article>
-              <h2>Artikel Terbaru</h2>
-              <p>Ketahui lebih dalam mengenai ancaman mikroplastik di laut dan bagaimana kita bisa mengurangi dampaknya.</p>
-            </article>
-          </div>
-
-          <!-- Sidebar -->
-          <aside class="col-12 col-md-4">
-            <h3>Testimoni</h3>
-            <div class="border rounded p-3 bg-white">
-              <blockquote class="blockquote mb-0">
-                <p>"Saya merasa lebih terhubung dengan alam setelah menjadi relawan."</p>
-                <footer class="blockquote-footer">Relawan A</footer>
-              </blockquote>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-8 hero-image">
+                    <img src="https://placehold.co/1200x600/0077B6/FFFFFF?text=Hero+Image+(Lautan)"
+                        alt="Hero Image" class="img-fluid">
+                </div>
+                <div class="col-12 col-lg-4 ocean-statistic">
+                    <h2>Statistik Laut</h2>
+                    <ul>
+                        <li>Populasi Ikan: [Data]</li>
+                        <li>Luas Terumbu Karang: [Data]</li>
+                        <li>Jumlah Sampah Plastik: [Data]</li>
+                    </ul>
+                </div>
             </div>
-          </aside>
         </div>
-      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-8 content">
+                    <h2>Program Relawan & Artikel</h2>
+
+                    <!-- Item 1: Program -->
+                    <div class="content-item">
+                        <h3>Program Penanaman Terumbu Karang</h3>
+                        <p>Program untuk memulihkan ekosistem terumbu karang yang rusak.</p>
+                        <a href="programXX.html" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+                    </div>
+
+                    <!-- Item 2: Artikel -->
+                    <div class="content-item">
+                        <h3>Artikel: Dampak Sampah Plastik Terhadap Kehidupan Laut</h3>
+                        <p>Artikel yang membahas tentang bahaya sampah plastik bagi hewan laut.</p>
+                        <a href="articleXX.html" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+
+                    <!-- Item 3: Artikel -->
+                    <div class="content-item">
+                        <h3>Artikel: Pentingnya Konservasi Mangrove</h3>
+                        <p>Artikel yang menjelaskan mengapa konservasi hutan mangrove sangat penting.</p>
+                        <a href="articleXX.html" class="btn btn-primary">Baca Selengkapnya</a>
+                    </div>
+
+                    <!-- Item 4: Program -->
+                    <div class="content-item">
+                        <h3>Program Pembersihan Pantai</h3>
+                        <p>Aksi bersih-bersih pantai untuk mengurangi sampah dan menjaga kebersihan lingkungan.</p>
+                        <a href="programXX.html" class="btn btn-primary">Pelajari Lebih Lanjut</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 sidebar">
+                    <h2>Testimoni</h2>
+                    <div class="testimoni">
+                        <p>"Saya sangat senang bisa bergabung dalam program konservasi laut ini. Ini adalah pengalaman
+                            yang luar biasa!"</p>
+                        <p>- [Nama Relawan], Relawan Konservasi Laut</p>
+                    </div>
+                    <div class="testimoni">
+                        <p>"Konservasi laut adalah tanggung jawab kita bersama. Mari kita jaga laut kita untuk generasi
+                            mendatang."</p>
+                        <p>- [Nama Ahli], Ahli Biologi Laut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- Partner -->
-    <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Partner Kami</h2>
-        <div class="row justify-content-center g-4">
-          <div class="col-4 col-md-2">
-            <img src="path-to-logo1.png" class="img-fluid" alt="Partner 1">
-          </div>
-          <div class="col-4 col-md-2">
-            <img src="path-to-logo2.png" class="img-fluid" alt="Partner 2">
-          </div>
-          <!-- Tambahkan lebih banyak partner jika perlu -->
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-4 contact">
+                    <h2>Hubungi Kami</h2>
+                    <p>Jika Anda memiliki pertanyaan atau ingin berkontribusi, silakan hubungi kami.</p>
+                    <p>Email: info@konservasilaut.com</p>
+                    <p>Telepon: +62 123 456 7890</p>
+                </div>
+
+                <div class="col-12 col-md-8 partner">
+                    <h2>Mitra Kami</h2>
+                    <div class="partner-logos">
+                        <img src="https://placehold.co/150x50/C1C5C9/FFFFFF?text=Mitra+1" alt="Mitra 1">
+                        <img src="https://placehold.co/150x50/C1C5C9/FFFFFF?text=Mitra+2" alt="Mitra 2">
+                        <img src="https://placehold.co/150x50/C1C5C9/FFFFFF?text=Mitra+3" alt="Mitra 3">
+                        <img src="https://placehold.co/150x50/C1C5C9/FFFFFF?text=Mitra+4" alt="Mitra 4">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- Footer  -->
-    <footer class="bg-dark text-white text-center py-4">
-      <p class="mb-0">&copy; 2025 Save the Ocean. Semua hak dilindungi.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>© 2024 Save Our Ocean</p>
+                </div>
+            </div>
+        </div>
     </footer>
-  </div>
 
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-pPpJ1fAFwTGJzE5W2mDEzBh1zKnOZ8T0bbF1vFS/BiZ8HDCiXvBJJM3UxyZ0Roow"
-    crossorigin="anonymous"></script>
+    <!-- Bootstrap Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

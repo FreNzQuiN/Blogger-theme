@@ -1,0 +1,86 @@
+/* about.css */
+
+.about-page {
+    padding: 30px 0;
+    background-color: #f8f9fa; /* Light Gray */
+}
+
+.about-us {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.about-us .row {
+    align-items: center; /* Vertically align columns */
+}
+
+.about-us-title {
+    font-size: 2em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 20px;
+}
+
+.about-us-image {
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.about-us-description {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px; /* Add margin to the description */
+}
+
+.about-us-form-title {
+    font-size: 1.5em;
+    color: #0077B6;
+    margin-bottom: 15px;
+    text-align: center; /* Center the form title */
+}
+
+/* Style the form */
+.about-us form {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Light Gray */
+}
+
+.team {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-title {
+    font-size: 2em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-member-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member-name {
+    font-size: 1.3em;
+    color: #0077B6; /* Oxford Blue */
+    margin-bottom: 5px;
+}
+
+.team-member-role {
+    font-size: 0.9em;
+    color: #6c757d; /* French Gray */
+}
