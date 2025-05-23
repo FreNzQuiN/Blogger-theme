@@ -118,6 +118,7 @@
     margin-bottom: 20px;
 }
 
+/* Style untuk item artikel */
 .article-item {
     margin-bottom: 30px;
     display: flex; /* Menggunakan flexbox untuk tata letak */
@@ -145,6 +146,25 @@
 .article-item-excerpt {
     font-size: 1.1em;
     color: #333;
+}
+
+/* Media Query untuk Layar Kecil (Tablet/Mobile) */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .article-item {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+        align-items: flex-start; /* Alignment ke kiri */
+    }
+
+    .article-item img {
+        width: 100%; /* Gambar memenuhi lebar container */
+        height: auto; /* Tinggi menyesuaikan proporsi gambar */
+        margin-right: 0; /* Hilangkan margin kanan */
+        margin-bottom: 10px; /* Tambahkan margin bawah */
+    }
+
+    .article-item-content {
+        text-align: left; /* Alignment teks ke kiri */
+    }
 }
 
 .btn-primary {
