@@ -107,15 +107,46 @@ body {
     margin-bottom: 30px;
 }
 
+.hero-image {
+    position: relative;
+    /* Hapus width: 100%; agar mengikuti grid Bootstrap */
+}
+
 .hero-image img,
 .hero-image .img-fluid {
+    width: 100%;
+    max-width: 100%;
+    display: block;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     object-fit: cover;
-    min-height: 320px;
-    max-height: 420px;
-    width: 100%;
+    aspect-ratio: 16/7;
 }
+
+@media (max-width: 991.98px) {
+    .hero-image img,
+    .hero-image .img-fluid {
+        aspect-ratio: 16/10;
+        height: auto;
+        min-height: unset;
+        max-height: 220px;
+    }
+    .ocean-statistic {
+        margin-top: 12px;
+        padding: 16px 10px;
+    }
+    .content,
+    .sidebar,
+    .cta .contact,
+    .cta .partner {
+        padding: 14px 8px;
+    }
+    .partner-logos img {
+        width: 110px;
+        margin: 4px 0;
+    }
+}
+
 
 .ocean-statistic {
     background-color: var(--color-bg);
@@ -173,6 +204,8 @@ body {
 }
 
 .content-item {
+    display: block;
+    width: 100%;
     margin-bottom: 28px;
     padding: 18px 18px 12px 18px;
     border-radius: var(--radius);
@@ -229,6 +262,76 @@ body {
 
 .content-item:last-child {
     margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .content-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+}
+
+.content-item img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: var(--radius);
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    display: block;
+}
+
+@media (min-width: 576px) {
+    .content-item img {
+        margin-bottom: 0;
+    }
+}
+
+/* Card Program & Artikel Responsive */
+.content-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 28px;
+    padding: 18px 18px 12px 18px;
+    border-radius: var(--radius);
+    background: var(--color-gray);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: box-shadow var(--transition), transform var(--transition);
+    border: none;
+    position: relative;
+}
+
+.content-item .badge,
+.content-item h3,
+.content-item p,
+.content-item a {
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Responsive fix for small screens */
+@media (max-width: 767.98px) {
+    .content-item {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        text-align: left;
+    }
+    .content-item h3 {
+        font-size: 1.1em;
+    }
+    .content-item .badge {
+        align-self: flex-start;
+        margin-bottom: 2px;
+    }
+    .content-item a.btn {
+        width: 100%;
+        margin-top: 8px;
+    }
+    .content, .sidebar, .cta .contact, .cta .partner {
+        padding: 14px 8px;
+    }
 }
 
 /* =========================
@@ -316,6 +419,49 @@ body {
 
 .partner-logos img:hover {
     box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+
+/* Mitra Kami Responsive */
+.partner-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.partner-logos img, .partner-logos .partner-logo-btn {
+    width: 120px;
+    min-width: 100px;
+    height: 38px;
+    object-fit: contain;
+    background: #e9ecef;
+    border-radius: 8px;
+    margin: 4px 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #888;
+    font-weight: 600;
+    text-align: center;
+}
+
+@media (max-width: 767.98px) {
+    .partner-logos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: flex-start;
+    }
+    .partner-logos img, .partner-logos .partner-logo-btn {
+        width: 47vw;
+        min-width: 80px;
+        max-width: 140px;
+        height: 34px;
+        font-size: 0.98em;
+    }
 }
 
 /* =========================

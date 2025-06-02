@@ -164,13 +164,16 @@
 .article-item {
     margin-bottom: 30px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
     border-radius: var(--radius);
     background: var(--color-white);
     box-shadow: var(--shadow);
     transition: box-shadow var(--transition), transform var(--transition);
     border: none;
     overflow: hidden;
+    padding: 18px 18px 14px 18px;
 }
 
 .article-item:hover {
@@ -179,12 +182,41 @@
 }
 
 .article-item img {
-    width: 160px;
-    height: 100px;
+    width: 100%;
+    height: 120px;
     object-fit: cover;
-    border-radius: var(--radius) 0 0 var(--radius);
-    margin-right: 0;
+    border-radius: var(--radius) var(--radius) 0 0;
     background: #e9ecef;
+    display: block;
+}
+
+/* Responsive: padding lebih kecil di layar kecil */
+@media (max-width: 991.98px) {
+    .article-item {
+        padding: 12px 8px 10px 8px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .article-item {
+        padding: 8px 4px 8px 4px;
+    }
+}
+
+@media (min-width: 768px) {
+    .article-item {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .article-item img {
+        width: 180px;
+        height: 120px;
+        border-radius: var(--radius) 0 0 var(--radius);
+        margin-bottom: 0;
+    }
+    .article-item-content {
+        padding: 18px 24px;
+    }
 }
 
 .article-item-content {
@@ -284,4 +316,50 @@
 
 .video-link {
     cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+    .article-list {
+        padding: 18px 8px;
+    }
+    .article-item img {
+        width: 110px;
+        height: 70px;
+    }
+    .article-item-content {
+        padding: 10px 8px;
+    }
+    .sidebar-widget img {
+        width: 60px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .article-list {
+        padding: 10px 2px;
+    }
+    .article-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    .article-item img {
+        width: 100%;
+        height: 90px;
+        border-radius: var(--radius) var(--radius) 0 0;
+        margin-bottom: 10px;
+    }
+    .article-item-content {
+        padding: 10px 2px;
+    }
+    .sidebar-widget {
+        flex-direction: row;
+        padding: 8px 4px;
+    }
+    .sidebar-widget img {
+        width: 48px;
+        height: 30px;
+        margin-right: 8px;
+    }
 }
