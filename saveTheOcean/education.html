@@ -66,25 +66,43 @@
                 <!-- Sidebar (4 columns) -->
                 <div class="col-md-4">
                     <aside class="article-sidebar">
-                        <div class="sidebar-widget video-link" data-video="dQw4w9WgXcQ">
-                            <h3>Video 1</h3>
-                            <p>Deskripsi Video 1.</p>
+                        <div class="sidebar-widget video-link d-flex align-items-center mb-3" data-video="dQw4w9WgXcQ"
+                            style="cursor:pointer;">
+                            <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" alt="Thumbnail Video 1" class="me-3 rounded"
+                                width="80" height="50">
+                            <div>
+                                <h3 class="mb-1 fs-6">Video: Laut Indonesia</h3>
+                                <span class="badge bg-info text-dark mb-1">Edukasi</span>
+                                <p class="mb-0 small text-muted">Mengapa laut penting bagi kehidupan?</p>
+                            </div>
                         </div>
-                        <div class="sidebar-widget video-link" data-video="your_second_video_id">
-                            <h3>Video 2</h3>
-                            <p>Deskripsi Video 2.</p>
+                        <div class="sidebar-widget video-link d-flex align-items-center mb-3" data-video="bTqVqk7FSmY"
+                            style="cursor:pointer;">
+                            <img src="https://img.youtube.com/vi/bTqVqk7FSmY/0.jpg" alt="Thumbnail Video 2" class="me-3 rounded"
+                                width="80" height="50">
+                            <div>
+                                <h3 class="mb-1 fs-6">Video: Sampah Plastik</h3>
+                                <span class="badge bg-danger mb-1">Lingkungan</span>
+                                <p class="mb-0 small text-muted">Dampak plastik di lautan.</p>
+                            </div>
                         </div>
-                        <div class="sidebar-widget video-link" data-video="your_third_video_id">
-                            <h3>Video 3</h3>
-                            <p>Deskripsi Video 3.</p>
+                        <div class="sidebar-widget video-link d-flex align-items-center mb-3" data-video="kJQP7kiw5Fk"
+                            style="cursor:pointer;">
+                            <img src="https://img.youtube.com/vi/kJQP7kiw5Fk/0.jpg" alt="Thumbnail Video 3" class="me-3 rounded"
+                                width="80" height="50">
+                            <div>
+                                <h3 class="mb-1 fs-6">Video: Konservasi Mangrove</h3>
+                                <span class="badge bg-success mb-1">Aksi</span>
+                                <p class="mb-0 small text-muted">Peran mangrove untuk pesisir.</p>
+                            </div>
                         </div>
                     </aside>
                 </div>
 
                 <!-- Video Banner -->
                 <div class="col-md-8">
-                    <section class="video-banner">
-                        <h2>Video Edukasi</h2>
+                    <section class="video-banner mb-4">
+                        <h2 class="mb-3">Video Edukasi</h2>
                         <div class="video-container">
                             <iframe id="mainVideo" width="560" height="315"
                                 src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video Edukasi Laut"
@@ -98,21 +116,30 @@
             <div class="row">
                 <!-- Infographic Carousel -->
                 <div class="col-md-8">
-                    <section class="infographic-carousel">
-                        <h2>Infografis Laut Kita</h2>
+                    <section class="infographic-carousel mb-4">
+                        <h2 class="mb-3">Infografis Laut Kita</h2>
                         <div id="infographicCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="https://placehold.co/800x400/00B4D8/FFFFFF?text=Infografis+1"
-                                        class="d-block w-100" alt="Infografis 1">
+                                    <img src="https://placehold.co/800x400/00B4D8/FFFFFF?text=Indonesia+Negara+Maritim+Terbesar"
+                                        class="d-block w-100 rounded" alt="Infografis 1">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Indonesia Negara Maritim Terbesar</h5>
+                                    </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://placehold.co/800x400/A50104/FFFFFF?text=Infografis+2"
-                                        class="d-block w-100" alt="Infografis 2">
+                                    <img src="https://placehold.co/800x400/A50104/FFFFFF?text=Ancaman+Sampah+Plastik"
+                                        class="d-block w-100 rounded" alt="Infografis 2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Ancaman Sampah Plastik di Laut</h5>
+                                    </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://placehold.co/800x400/FCBA04/000000?text=Infografis+3"
-                                        class="d-block w-100" alt="Infografis 3">
+                                    <img src="https://placehold.co/800x400/FCBA04/000000?text=Manfaat+Mangrove"
+                                        class="d-block w-100 rounded" alt="Infografis 3">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5>Manfaat Mangrove untuk Pesisir</h5>
+                                    </div>
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#infographicCarousel"
@@ -132,46 +159,49 @@
                 <!-- Article List (8 columns) -->
                 <div class="col-md-8">
                     <section class="article-list">
-                        <h1 class="article-list-title">Artikel Terbaru</h1>
+                        <h1 class="article-list-title mb-4">Artikel Terbaru</h1>
                         <!-- Article Item 1 -->
-                        <article class="article-item">
-                            <img src="https://placehold.co/400x200/00B4D8/FFFFFF?text=Artikel+1" alt="Gambar Artikel 1"
-                                class="img-fluid">
-                            <div class="article-item-content">
-                                <h2 class="article-item-title">Judul Artikel 1</h2>
+                        <article class="article-item card flex-row align-items-center shadow-sm mb-4 border-0">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+                                alt="Gambar Artikel 1" class="img-fluid rounded-start" width="160" height="100">
+                            <div class="article-item-content card-body">
+                                <span class="badge bg-info text-dark mb-2">Edukasi</span>
+                                <h2 class="article-item-title fs-5">Mengapa Laut Penting untuk Kehidupan?</h2>
                                 <p class="article-item-excerpt">
-                                    Deskripsi singkat artikel 1. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
+                                    Laut menyediakan oksigen, pangan, dan menjaga iklim bumi. Pelajari peran laut dalam kehidupan
+                                    sehari-hari.
                                 </p>
-                                <a href="articleXX.html" class="btn btn-primary">Baca Selengkapnya</a>
+                                <a href="articleXX.html" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                             </div>
                         </article>
 
                         <!-- Article Item 2 -->
-                        <article class="article-item">
-                            <img src="https://placehold.co/400x200/A50104/FFFFFF?text=Artikel+2" alt="Gambar Artikel 2"
-                                class="img-fluid">
-                            <div class="article-item-content">
-                                <h2 class="article-item-title">Judul Artikel 2</h2>
+                        <article class="article-item card flex-row align-items-center shadow-sm mb-4 border-0">
+                            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80"
+                                alt="Gambar Artikel 2" class="img-fluid rounded-start" width="160" height="100">
+                            <div class="article-item-content card-body">
+                                <span class="badge bg-danger mb-2">Lingkungan</span>
+                                <h2 class="article-item-title fs-5">Sampah Plastik: Ancaman Nyata di Laut</h2>
                                 <p class="article-item-excerpt">
-                                    Deskripsi singkat artikel 2. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
+                                    Setiap tahun jutaan ton plastik mencemari laut. Temukan solusi dan aksi nyata yang bisa
+                                    kamu lakukan.
                                 </p>
-                                <a href="articleXX.html" class="btn btn-primary">Baca Selengkapnya</a>
+                                <a href="articleXX.html" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                             </div>
                         </article>
 
                         <!-- Article Item 3 -->
-                        <article class="article-item">
-                            <img src="https://placehold.co/400x200/FCBA04/000000?text=Artikel+3" alt="Gambar Artikel 3"
-                                class="img-fluid">
-                            <div class="article-item-content">
-                                <h2 class="article-item-title">Judul Artikel 3</h2>
+                        <article class="article-item card flex-row align-items-center shadow-sm mb-4 border-0">
+                            <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80"
+                                alt="Gambar Artikel 3" class="img-fluid rounded-start" width="160" height="100">
+                            <div class="article-item-content card-body">
+                                <span class="badge bg-success mb-2">Aksi</span>
+                                <h2 class="article-item-title fs-5">Konservasi Mangrove untuk Masa Depan</h2>
                                 <p class="article-item-excerpt">
-                                    Deskripsi singkat artikel 3. Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit.
+                                    Mangrove melindungi pesisir dan menjadi habitat penting biota laut. Yuk, dukung konservasi
+                                    mangrove!
                                 </p>
-                                <a href="articleXX.html" class="btn btn-primary">Baca Selengkapnya</a>
+                                <a href="articleXX.html" class="btn btn-primary btn-sm">Baca Selengkapnya</a>
                             </div>
                         </article>
                     </section>

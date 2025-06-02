@@ -1,3 +1,18 @@
+/* =========================
+   CSS Variables
+   ========================= */
+:root {
+    --color-primary: #0077B6;
+    --color-secondary: #00B4D8;
+    --color-accent: #FCBA04;
+    --color-danger: #A50104;
+    --color-bg: #f8f9fa;
+    --color-white: #fff;
+    --shadow: 0 4px 16px rgba(0,0,0,0.08);
+    --radius: 12px;
+    --transition: 0.2s cubic-bezier(.4,0,.2,1);
+}
+
 /* article.css */
 
 .article-page {
@@ -85,19 +100,45 @@
 }
 
 .sidebar-widget {
-    background-color: #fff;
+    background-color: var(--color-white);
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    transition: box-shadow var(--transition), background var(--transition);
+    cursor: pointer;
+}
+
+.sidebar-widget:hover {
+    background: #f0f8ff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.sidebar-widget img {
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 12px;
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
 }
 
 .sidebar-widget h3 {
-    font-size: 1.4em;
-    color: #0077B6; /* Oxford Blue */
-    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--color-primary);
+    margin-bottom: 4px;
 }
 
+.sidebar-widget .badge {
+    margin-bottom: 4px;
+}
+
+.sidebar-widget p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 0;
+}
 
 /*   Article List   */
 .article-list-page {
@@ -106,75 +147,88 @@
 }
 
 .article-list {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .article-list-title {
     font-size: 2em;
-    color: #0077B6; /* Oxford Blue */
+    color: var(--color-primary);
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 /* Style untuk item artikel */
 .article-item {
     margin-bottom: 30px;
-    display: flex; /* Menggunakan flexbox untuk tata letak */
-    align-items: center; /* Vertikal align item */
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius);
+    background: var(--color-white);
+    box-shadow: var(--shadow);
+    transition: box-shadow var(--transition), transform var(--transition);
+    border: none;
+    overflow: hidden;
+}
+
+.article-item:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    transform: translateY(-2px) scale(1.01);
 }
 
 .article-item img {
-    width: 200px; /* Lebar gambar */
-    height: 120px; /* Tinggi gambar */
-    object-fit: cover; /* Memastikan gambar mengisi area dengan benar */
-    border-radius: 8px;
-    margin-right: 20px;
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: var(--radius) 0 0 var(--radius);
+    margin-right: 0;
+    background: #e9ecef;
 }
 
 .article-item-content {
-    flex: 1; /* Memungkinkan konten mengisi sisa ruang */
+    flex: 1;
+    padding: 18px 24px;
 }
 
 .article-item-title {
-    font-size: 1.5em;
-    color: #0077B6; /* Oxford Blue */
+    font-size: 1.2em;
+    color: var(--color-primary);
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .article-item-excerpt {
-    font-size: 1.1em;
+    font-size: 1.05em;
     color: #333;
+    margin-bottom: 12px;
 }
 
-/* Media Query untuk Layar Kecil (Tablet/Mobile) */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-    .article-item {
-        flex-direction: column; /* Ubah tata letak menjadi vertikal */
-        align-items: flex-start; /* Alignment ke kiri */
-    }
-
-    .article-item img {
-        width: 100%; /* Gambar memenuhi lebar container */
-        height: auto; /* Tinggi menyesuaikan proporsi gambar */
-        margin-right: 0; /* Hilangkan margin kanan */
-        margin-bottom: 10px; /* Tambahkan margin bawah */
-    }
-
-    .article-item-content {
-        text-align: left; /* Alignment teks ke kiri */
-    }
+.badge {
+    font-size: 0.95em;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .btn-primary {
-    background-color: #00B4D8; /* Pacific Cyan */
-    border-color: #00B4D8;
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-white);
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background var(--transition), box-shadow var(--transition);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-.btn-primary:hover {
-    background-color: #0077B6; /* Oxford Blue */
-    border-color: #0077B6;
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
 
 

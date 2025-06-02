@@ -1,10 +1,29 @@
-/* style.css */
+/* =========================
+   CSS Variables
+   ========================= */
+:root {
+    --color-primary: #0077B6;
+    --color-secondary: #00B4D8;
+    --color-accent: #FCBA04;
+    --color-danger: #A50104;
+    --color-bg: #EBF5FB;
+    --color-white: #fff;
+    --color-gray: #f9f9f9;
+    --color-dark: #333;
+    --color-muted: #888;
+    --shadow: 0 4px 16px rgba(0,0,0,0.08);
+    --radius: 12px;
+    --transition: 0.2s cubic-bezier(.4,0,.2,1);
+    --font-main: 'Segoe UI', 'Arial', sans-serif;
+}
 
-/* General Styles */
+/* =========================
+   Global Styles
+   ========================= */
 body {
-    font-family: sans-serif;
-    color: #333;
-    background-color: #EBF5FB;
+    font-family: var(--font-main);
+    color: var(--color-dark);
+    background-color: var(--color-bg);
 }
 
 .container-fluid {
@@ -12,88 +31,102 @@ body {
     padding-right: 15px;
 }
 
-/* Header */
+/* =========================
+   Header & Navigation
+   ========================= */
 .header {
-    background-color: #FFFFFF; /* White */
+    background-color: var(--color-white);
     padding: 20px 0;
     margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
-.header h1 {
-    color: #0077B6; /* Oxford Blue */
+.site-title, .header h1 {
+    color: var(--color-primary);
     font-size: 2em;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
-/* Navigation */
 .navbar {
     padding: 0;
 }
 
 .navbar-nav .nav-link {
-    color: #0077B6; /* Oxford Blue */
+    color: var(--color-primary);
     padding: 10px 15px;
+    border-radius: var(--radius);
+    transition: background var(--transition), color var(--transition);
 }
 
-.navbar-nav .nav-link:hover {
-    color: #00B4D8; /* Pacific Cyan */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-white);
+    background: var(--color-secondary);
 }
 
-/* Navbar Collapse Styling */
 .navbar-collapse {
     position: absolute;
-    top: 100%; /* Tempatkan di bawah navbar */
+    top: 100%;
     left: 0;
-    background-color: #fff; /* Warna latar belakang agar terlihat */
+    background-color: var(--color-white);
     width: 35vw;
-    z-index: 1000; /* Pastikan di atas elemen lain */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan opsional */
-    border-radius: 5px; /* Sudut membulat opsional */
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
 }
 
 .navbar-nav {
-    flex-direction: column; /* Susun item menu secara vertikal */
+    flex-direction: column;
     padding: 10px;
 }
 
 .navbar-toggler {
-    /* Adjust position for better visibility */
     position: relative;
     z-index: 1001;
 }
 
-@media (min-width: 992px) { /* Adjust breakpoint to match your layout */
+@media (min-width: 992px) {
     .navbar-collapse {
-        position: static; /* Kembalikan ke posisi semula saat layar besar */
+        position: static;
         width: auto;
         background-color: transparent;
         box-shadow: none;
-        flex-grow: 1; /* Allow navbar to take remaining space */
+        flex-grow: 1;
     }
-
     .navbar-nav {
-        flex-direction: row; /* Susun item menu secara horizontal */
-        justify-content: flex-end; /* Align menu items to the right */
+        flex-direction: row;
+        justify-content: flex-end;
     }
 }
 
-/* Hero Section */
+/* =========================
+   Hero Section
+   ========================= */
 .hero {
     margin-bottom: 30px;
 }
 
-.hero-image img {
-    border-radius: 8px;
+.hero-image img,
+.hero-image .img-fluid {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+    min-height: 320px;
+    max-height: 420px;
+    width: 100%;
 }
 
 .ocean-statistic {
-    background-color: #EBF5FB; /* Light Blue */
-    padding: 20px;
-    border-radius: 8px;
+    background-color: var(--color-bg);
+    padding: 24px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-top: 18px;
 }
 
 .ocean-statistic h2 {
-    color: #0077B6; /* Oxford Blue */
+    color: var(--color-primary);
     font-size: 1.5em;
     margin-bottom: 15px;
 }
@@ -101,113 +134,234 @@ body {
 .ocean-statistic ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .ocean-statistic li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
-/* Main Content Styles */
+.ocean-statistic li::before {
+    content: "🌊";
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+/* =========================
+   Main Content
+   ========================= */
 .content-area {
     margin-bottom: 30px;
 }
 
 .content {
-    background-color: #FFFFFF; /* White */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-white);
+    padding: 24px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .content h2 {
     font-size: 1.7em;
-    color: #0077B6; /* Oxford Blue */
-    margin-bottom: 15px;
+    color: var(--color-primary);
+    margin-bottom: 18px;
+    font-weight: 700;
 }
 
 .content-item {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 28px;
+    padding: 18px 18px 12px 18px;
+    border-radius: var(--radius);
+    background: var(--color-gray);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: box-shadow var(--transition), transform var(--transition);
+    border: none;
+    position: relative;
+}
+
+.content-item:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    transform: translateY(-2px) scale(1.01);
 }
 
 .content-item h3 {
-    font-size: 1.3em;
-    color: #0077B6; /* Oxford Blue */
-    margin-bottom: 5px;
+    font-size: 1.25em;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .content-item p {
-    font-size: 1.1em;
-    color: #333;
+    font-size: 1.08em;
+    color: var(--color-dark);
+    margin-bottom: 10px;
 }
 
-.sidebar {
-    background-color: #FFFFFF; /* White */
-    padding: 20px;
+.content-item .badge {
+    font-size: 0.85em;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    margin-right: 8px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 3px 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.content-item .badge-article {
+    background: var(--color-accent);
+    color: #222;
+}
+
+.content-item .badge-program {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.content-item .badge-info {
+    background: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.content-item:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   Sidebar & Testimoni
+   ========================= */
+.sidebar {
+    background-color: var(--color-white);
+    padding: 24px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .sidebar h2 {
-    font-size: 1.7em;
-    color: #0077B6; /* Oxford Blue */
+    font-size: 1.4em;
+    color: var(--color-primary);
     margin-bottom: 15px;
 }
 
 .testimoni {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    margin-bottom: 22px;
+    padding: 16px 18px;
+    border-left: 4px solid var(--color-secondary);
+    border-radius: var(--radius);
+    background: var(--color-gray);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 1.05em;
 }
 
 .testimoni p {
     font-style: italic;
-    color: #555;
+    color: var(--color-dark);
+    margin-bottom: 5px;
 }
 
-/* Call to Action Styles */
+.testimoni footer {
+    font-size: 0.98em;
+    color: var(--color-muted);
+}
+
+/* =========================
+   Call to Action & Partner
+   ========================= */
 .cta {
     margin-bottom: 30px;
 }
 
 .cta .contact,
 .cta .partner {
-    background-color: #EBF5FB; /* Light Blue */
-    padding: 20px;
-    border-radius: 8px;
+    background-color: var(--color-bg);
+    padding: 24px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .cta h2 {
-    font-size: 1.7em;
-    color: #0077B6; /* Oxford Blue */
-    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: var(--color-primary);
+    margin-bottom: 12px;
 }
 
-.cta p {
-    font-size: 1.1em;
-    color: #333;
+.cta p, .cta address {
+    font-size: 1.08em;
+    color: var(--color-dark);
+    margin-bottom: 0.5em;
 }
 
 .partner-logos {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap; /* Izinkan logo untuk turun ke baris baru */
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
 .partner-logos img {
-    width: 150px;
-    height: auto;
+    width: 140px;
+    height: 48px;
     object-fit: contain;
-    margin: 10px; /* Tambahkan margin untuk ruang antar logo */
+    margin: 6px 0;
+    background: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow var(--transition);
 }
 
-/* Footer */
+.partner-logos img:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+
+/* =========================
+   Footer
+   ========================= */
 .footer {
-    background-color: #0077B6; /* Oxford Blue */
-    color: #FFFFFF; /* White */
+    background-color: var(--color-primary);
+    color: var(--color-white);
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    font-size: 1.07em;
+}
+
+/* =========================
+   Utility Classes
+   ========================= */
+.rounded {
+    border-radius: var(--radius) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-white);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    transition: background var(--transition), box-shadow var(--transition);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+a {
+    transition: color var(--transition);
+}
+
+a:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
 }
