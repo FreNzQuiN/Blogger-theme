@@ -173,7 +173,6 @@
     transition: box-shadow var(--transition), transform var(--transition);
     border: none;
     overflow: hidden;
-    padding: 18px 18px 14px 18px;
 }
 
 .article-item:hover {
@@ -188,31 +187,6 @@
     border-radius: var(--radius) var(--radius) 0 0;
     background: #e9ecef;
     display: block;
-}
-
-/* Responsive: padding lebih kecil di layar kecil */
-@media (max-width: 991.98px) {
-    .article-item {
-        padding: 12px 8px 10px 8px;
-    }
-    .article-list,
-    .article-content,
-    .article-sidebar {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .article-item {
-        padding: 8px 4px 8px 4px;
-    }
-    .article-list,
-    .article-content,
-    .article-sidebar {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
 }
 
 @media (min-width: 768px) {
