@@ -110,6 +110,12 @@
    Responsive
    ========================= */
 @media (max-width: 991.98px) {
+    .program-list,
+    .program-detail,
+    .article-sidebar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
     .program-list {
         padding: 18px 8px;
     }
@@ -126,6 +132,12 @@
 }
 
 @media (max-width: 767.98px) {
+    .program-list,
+    .program-detail,
+    .article-sidebar {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
     .program-list {
         padding: 10px 2px;
     }
